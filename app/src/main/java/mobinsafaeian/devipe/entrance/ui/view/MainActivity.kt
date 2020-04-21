@@ -87,9 +87,7 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
      * SwipeRefreshLayout Listener
      */
     override fun onRefresh() {
-        Handler().postDelayed({
-            listViewModel.fetchList()
-        },2000)
+        listViewModel.fetchList()
     }
 
 

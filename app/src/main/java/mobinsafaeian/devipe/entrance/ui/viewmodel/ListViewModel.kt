@@ -25,7 +25,9 @@ class ListViewModel : ViewModel(), KoinComponent {
     }
 
 
-
+    /**
+     * Fetch List and Set the Result to LiveData
+     */
     fun fetchList() {
         val disposable = getApi.fetchList()
             .async()
@@ -43,6 +45,9 @@ class ListViewModel : ViewModel(), KoinComponent {
     }
 
 
+    /**
+     * Dispose Observables to Avoid Crashes
+     */
     fun unbind() {
         compositeDisposable.clear()
     }
